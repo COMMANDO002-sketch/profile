@@ -1,0 +1,164 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 50% 42%, rgba(79, 49, 126, 0.22), transparent 47%),
+        #090a12;
+    color: #fff;
+    font-family: "Manrope", sans-serif;
+}
+
+.page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 32px 18px;
+}
+
+.profile-card {
+    position: relative;
+    isolation: isolate;
+    width: min(100%, 360px);
+    padding: 32px 28px 30px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 24px;
+    background: linear-gradient(155deg, #1d1935 0%, #151426 56%, #11121f 100%);
+    box-shadow: 0 22px 70px rgba(0, 0, 0, 0.48);
+    text-align: center;
+}
+
+.profile-card::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 104px;
+    height: 72px;
+    border-right: 1px solid rgba(245, 113, 197, 0.95);
+    border-bottom: 1px solid rgba(169, 113, 255, 0.95);
+    border-radius: 0 0 24px 0;
+    box-shadow: 10px 8px 28px rgba(234, 88, 190, 0.2);
+    content: "";
+    pointer-events: none;
+}
+
+.avatar-wrap {
+    position: relative;
+    width: 116px;
+    height: 116px;
+    margin: 0 auto 20px;
+    padding: 4px;
+    border: 2px solid #b46bfa;
+    border-radius: 50%;
+    background: #292044;
+    box-shadow: 0 0 24px rgba(174, 102, 248, 0.28);
+}
+
+.avatar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #c5a9df;
+    object-fit: cover;
+}
+
+.status-dot {
+    position: absolute;
+    top: 5px;
+    right: 1px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #201a37;
+    border-radius: 50%;
+    background: #55dc91;
+    box-shadow: 0 0 10px rgba(85, 220, 145, 0.48);
+}
+
+h1 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.role {
+    margin: 7px 0 19px;
+    color: #ed83cb;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    margin: 0 0 21px;
+    padding: 0;
+    list-style: none;
+}
+
+.skills li {
+    min-width: 48px;
+    padding: 7px 12px;
+    border: 1px solid rgba(198, 173, 235, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.055);
+    color: #e4dced;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.skills .more {
+    min-width: 42px;
+    border-color: rgba(237, 131, 203, 0.24);
+    background: rgba(237, 131, 203, 0.12);
+    color: #f2a5d9;
+}
+
+.bio {
+    margin: 0 auto 25px;
+    max-width: 276px;
+    color: #c2bfce;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.message-button {
+    display: flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(246, 117, 199, 0.12);
+    color: #bd4d9a;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.message-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 11px 28px rgba(246, 117, 199, 0.24);
+}
+
+.message-button:focus-visible {
+    outline: 3px solid #ed83cb;
+    outline-offset: 4px;
+}
+
+@media (max-width: 380px) {
+    .profile-card {
+        padding: 28px 22px 26px;
+    }
+}
